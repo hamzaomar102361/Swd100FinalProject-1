@@ -2,37 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Final Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <form id="form">
     <h1>Let's Create an ID card!</h1>
     <label for="firstname">First Name</label><br>
-    <input type="text" id="firstname"><br>
+    <input type="text" id="firstname" placeholder="Your First Name"><br>
     <label for="lastname">Last Name</label><br>
-    <input type="text" id="lastname"><br>
+    <input type="text" id="lastname" placeholder="Your Last Name"><br>
     <label for="age">Age</label><br>
-    <input type="number" id="age"><br>
+    <input type="number" id="age" placeholder="Your Age"><br>
     <label for="telephon">Phone Number</label><br>
-    <input type="tel"  id="telephon"><br>
+    <input type="tel"  id="telephon" placeholder="123456789"><br>
     <label for="address">Address</label><br>
-    <input type="text" id="address"><br>
+    <input type="text" id="address" placeholder="Your Current Address"><br>
+    <button type="submit" id="btn" onclick="idCard()">Get ID Card</button>
   </form>
-  <button type="submit" id="btn" onclick="idCard()">Get ID Card</button>
   <div id="idCard">
-
-<img src="http://www.iconninja.com/files/373/611/612/person-user-profile-male-man-avatar-account-icon.svg">
-
-<p id="postFullName"></p>
-
-<p id="postAge"></p>
-
-<p id="postPhoneNumber"></p>
-
-<p id="postAddress"></p>
+    <div id="content">
+      <img src="http://www.iconninja.com/files/373/611/612/person-user-profile-male-man-avatar-account-icon.svg">
+      <p id="postFullName"></p>
+    </div>
+    <div id="details">
+      <p id="postAge"></p>
+      <p id="postPhoneNumber"></p>
+      <p id="postAddress"></p>
+    </div>
 
 </div>
 

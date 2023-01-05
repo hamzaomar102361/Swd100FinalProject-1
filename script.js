@@ -1,6 +1,4 @@
 function idCard () {
-  var form = document.getElementById("form");
-  // form.preventDefault();
   var firstName = document.getElementById("firstname").value;
   var lastName = document.getElementById("lastname").value;
   var address = document.getElementById("address").value;
@@ -17,10 +15,15 @@ function idCard () {
   numberArray.push(phoneNumber);
   for(var i = 0; i < numberArray.length; i++) {
     if(numberArray[i] < 100) {
-      ageOnId.innerHTML = "Age:" + numberArray[i]; 
-    }
-    else {
-      phone.innerHTML = "Phone Number:" + numberArray[i];
+      ageOnId.innerHTML = "Age:" + " " + numberArray[i]; 
+    }else if(numberArray[i] > 100) {
+      phone.innerHTML = "Phone Number:" + " "  + numberArray[i];
+    } else {
+      phone.innerHTML = " ";
     }
   }
+  var form = document.getElementById("form");
+  form.onsubmit = function (e) {
+    e.preventDefault();
+  };
 }
